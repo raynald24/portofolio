@@ -45,3 +45,19 @@ ul.lightmode {
     width: 60px;
     position: center;
 }
+
+#arrow {
+    animation: 1s upDown infinite;
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
