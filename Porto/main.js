@@ -1,5 +1,20 @@
-$(document).ready(function() {
-    $('#lightmode').click(function() {
-        $('body').toggleClass('dark-mode');
-    });
+function toggleDetail (e){
+    const target =$(e.target)
+
+    if($(target).hasClass("active")){
+        $(target).html(" More Info").removeClass("active")
+    }else {
+        $(target).html('Less Info').addClass("active")
+    }
+    const item = $(target).parents(".about-exp-item")
+    const detail = $(item).children(".about-exp-item-detail")
+    $(detail).slideToggle()
+}
+const lightmode = document.getElementById('lightmode');
+const body = document.body;
+
+lightmode.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
 });
+
+
